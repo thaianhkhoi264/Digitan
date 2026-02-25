@@ -1,19 +1,17 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Digitranslate!",
   "version": "1.0",
-  "browser_specific_settings": {"gecko": {"id": "{845ca4e5-ca35-4d65-af59-fe4e7a77c7ca}"}},
   "description": "Right-click any image to open it in Google Translate's image mode — no clipboard required.",
   "permissions": [
     "contextMenus",
     "tabs",
     "storage",
-    "clipboardWrite",
-    "<all_urls>"
+    "clipboardWrite"
   ],
+  "host_permissions": ["<all_urls>"],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   },
   "content_scripts": [
     {
