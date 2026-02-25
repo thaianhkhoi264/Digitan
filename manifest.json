@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Digitranslate!",
+  "version": "1.0",
+  "description": "Right-click any image to open it in Google Translate's image mode — no clipboard required.",
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "storage",
+    "clipboardWrite",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://translate.google.com/*"],
+      "js": ["content_scripts/google_translate.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://www.google.com/search*"],
+      "js": ["content_scripts/lens_clicker.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "48": "icons/icon.svg"
+  }
+}
