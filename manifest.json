@@ -2,7 +2,15 @@
   "manifest_version": 2,
   "name": "Digitranslate!",
   "version": "1.0",
-  "browser_specific_settings": {"gecko": {"id": "{845ca4e5-ca35-4d65-af59-fe4e7a77c7ca}"}},
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{845ca4e5-ca35-4d65-af59-fe4e7a77c7ca}",
+      "data_collection_permissions": {
+        "required": [],
+        "optional": []
+      }
+    }
+  },
   "description": "Right-click any image to open it in Google Translate's image mode — no clipboard required.",
   "permissions": [
     "contextMenus",
