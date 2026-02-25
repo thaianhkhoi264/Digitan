@@ -22,7 +22,6 @@
     await navigator.clipboard.write([
       new ClipboardItem({ [blob.type]: blob }),
     ]);
-    console.log("[Translate Image] Image written to clipboard.");
   } catch (err) {
     console.error("[Translate Image] Clipboard write failed:", err);
     showBanner("Could not copy image — try copying it manually, then press Ctrl+V.", true);
